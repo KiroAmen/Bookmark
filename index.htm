@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <title>Bookmark</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="container">
+        <div
+          class="header-inner text-center d-flex justify-content-center align-items-start"
+          style="height: 150px; transform: rotate(180deg)"
+        >
+          <div class="title-book position-relative">
+            <p style="transform: rotate(180deg)" class="position-absolute">
+              Bookmarker
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <div class="container">
+      <div class="line"></div>
+    </div>
+    <!-- Title -->
+    <div class="d-flex justify-content-center mt-3">
+      <i
+        class="fa-solid fa-bookmark me-2 mb-3 align-self-center"
+        style="font-size: 25px; color: #41a65c"
+      ></i>
+      <p class="title">Bookmark your favorite sites</p>
+      <i
+        class="fa-solid fa-bookmark ms-2 mb-3 align-self-center"
+        style="font-size: 25px; color: #b3ac4a"
+      ></i>
+    </div>
+    <!-- Form -->
+    <div class="container">
+      <div class="d-flex flex-column p-4">
+        <label for="bookmarkName" class="form-label label-site-name">
+          <i class="fa-solid fa-book-bookmark me-2" style="color: black"></i>
+          Site Name
+        </label>
+        <input
+          class="form-control site-name"
+          type="text"
+          placeholder="Bookmark Name"
+          aria-label="default input example"
+          id="bookmarkName"
+          oninput="validateWebsiteName()"
+        />
+
+        <label for="bookmarkName" class="form-label label-site-name mt-4">
+          <i class="fa-solid fa-link m-2" style="color: black"></i>
+          Site URL
+        </label>
+        <input
+          class="form-control site-name"
+          type="text"
+          placeholder="Website URL"
+          aria-label="default input example"
+          id="websiteUrl"
+          oninput="validateWebsiteUrl()"
+        />
+
+        <button
+          class="btn btn-danger px-5 mx-auto mt-4"
+          style="width: min-content"
+          id="submitBtn"
+        >
+          Submit
+        </button>
+      </div>
+
+      <div class="container">
+        <div class="line mt-0"></div>
+      </div>
+    </div>
+
+    <!-- Table  -->
+    <div class="container mb-3">
+      <table class="w-100 bg-white mt-3">
+        <tr class="text-center">
+          <th
+            style="height: 2.5em"
+            class="border border-top-0 border-start-0 border-end-0 border-opacity-25"
+          >
+            Index
+          </th>
+          <th
+            style="height: 2.5em"
+            class="border border-top-0 border-start-0 border-end-0 border-opacity-25"
+          >
+            Website Name
+          </th>
+          <th
+            style="height: 2.5em"
+            class="border border-top-0 border-start-0 border-end-0 border-opacity-25"
+          >
+            Visit
+          </th>
+          <th
+            style="height: 2.5em"
+            class="border border-top-0 border-start-0 border-end-0 border-opacity-25"
+          >
+            Delete
+          </th>
+        </tr>
+        <tbody id="myData" class="text-center"></tbody>
+      </table>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
